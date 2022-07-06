@@ -4,12 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server:dev": "ts-node-dev --respawn index.ts",
-    "server:start": "ts-node index.ts",
-    "client:dev": "npm run start --prefix client",
-    "client:build": "npm run build --prefix client",
-    "dev": "concurrently \" npm run server:dev \" \" npm run client:dev \"",
-    "start": "concurrently \" npm run server:start \" \" npm run client:build \""
+    "dev": "ts-node-dev --respawn index.ts",
+    "build": "ts-node index.ts"
   },
   "repository": {
     "type": "git",
