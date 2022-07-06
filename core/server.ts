@@ -24,6 +24,10 @@ server.use(responseMiddleware)
 
 const PORT : number = +(process.env.PORT as string) || 3333
 
+server.get('/', (req, res) => {
+  res.sendFile("../build/index.html")
+})
+
 const start = async () : Promise<void> => {
   try {
     await mongoose.connect('mongodb+srv://NikitaFed:benten1011@clusterfirst.w0sik.mongodb.net/form-constructor')
