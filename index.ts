@@ -1,3 +1,5 @@
-import start from "./core/server";
+import ServerlessHttp from "serverless-http";
+import main from "./core/server";
 
-start()
+main.start()
+module.exports.handler = ServerlessHttp(main.server)

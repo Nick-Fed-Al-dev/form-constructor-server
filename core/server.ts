@@ -42,4 +42,6 @@ const start = async () : Promise<void> => {
   }
 }
 
-export default start
+export default {
+  server, start
+}
