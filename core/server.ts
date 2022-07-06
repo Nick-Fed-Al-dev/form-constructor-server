@@ -6,6 +6,7 @@ import * as dotenv from 'dotenv'
 
 import router from './router'
 import responseMiddleware from '../middleware/response.middleware'
+import path from 'path'
 
 const server = express()
 dotenv.config()
@@ -25,7 +26,7 @@ server.use(responseMiddleware)
 const PORT : number = +(process.env.PORT as string) || 3333
 
 server.get('/', (req, res) => {
-  res.sendFile("../build/index.html")
+  res.sendFile(path.resolve(__dirname, "build", "index.html"))
 })
 
 const start = async () : Promise<void> => {
