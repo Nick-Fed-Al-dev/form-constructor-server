@@ -1,8 +1,8 @@
 
 [build]
-    functions="functions"
+    functions=""
 
 [[redirects]]
-    to="/.netlify/functions/api:splat"
+    to="/.netlify/index:splat"
     from="/*"
     status=200 
